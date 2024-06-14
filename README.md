@@ -1,4 +1,4 @@
-# HICO Senior Dev Task - Peanut butter payroll Back End
+# Peanut butter payroll Back End
 
 On start the Initial database config is located in .env
 Please create a table in a MYSQL database and set the table name with username and password in the .env file
