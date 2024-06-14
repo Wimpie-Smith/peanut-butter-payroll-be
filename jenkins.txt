@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                sh 'npm install'
+                sh 'npx tsc'
+            }
+        }
+        stage('Test') {
+            steps {
+                sh 'npm test'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                // Deployment steps here (e.g., Docker build and push, Kubernetes deploy, etc.)
+            }
+        }
+    }
+    post {
+        always {
+            junit '**/test-results.xml'
+        }
+    }
+}
